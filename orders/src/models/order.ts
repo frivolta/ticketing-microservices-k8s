@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import { OrderStatus } from "@frivolta-tickets/common";
 import { TicketDoc } from "./ticket";
 export { OrderStatus };
+
 interface OrderAttrs {
   userId: string;
   status: OrderStatus;
@@ -11,6 +12,7 @@ interface OrderAttrs {
 
 interface OrderDoc extends mongoose.Document {
   userId: string;
+  version: number;
   status: OrderStatus;
   expiresAt: Date;
   ticket: TicketDoc;
