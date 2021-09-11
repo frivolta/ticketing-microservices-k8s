@@ -45,7 +45,7 @@ const start = async () => {
 };
 
 app.listen(3000, () => {
-  console.log("Auth: listening on 3000");
+  console.log("listening on 3000");
 });
 
 start();
